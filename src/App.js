@@ -1,5 +1,6 @@
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Landing from "@/pages/Landing";
 import "@/styles/Landing.css";
 
@@ -11,6 +12,7 @@ function App() {
           <Route path="/" element={<Landing />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </div>
   );
 }
