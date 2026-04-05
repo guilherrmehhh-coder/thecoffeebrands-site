@@ -1,190 +1,149 @@
-import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Target, TrendingUp, Zap, CheckCircle2, Sparkles, Brain, ChevronDown } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
+# 🔄 MUDANÇAS RÁPIDAS - Copie e Cole
 
-const Landing = () => {
-  const heroRef = useRef(null);
-  const problemRef = useRef(null);
-  const solutionRef = useRef(null);
-  const benefitsRef = useRef(null);
-  const orderBumpRef = useRef(null);
-  const pathsRef = useRef(null);
-  const ctaFinalRef = useRef(null);
+## Arquivo: src/pages/Landing.jsx
+
+### 🎯 MUDANÇA 1: Adicionar ref da nova seção D.A.D.
+
+**PROCURE por (linha ~14):**
+```javascript
   const aboutRef = useRef(null);
+```
 
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
+**ADICIONE DEPOIS:**
+```javascript
+  const dadRef = useRef(null);
+```
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in-visible');
-        }
-      });
-    }, observerOptions);
+**PROCURE por (linha ~30):**
+```javascript
+const sections = [heroRef, problemRef, solutionRef, benefitsRef, orderBumpRef, pathsRef, ctaFinalRef, aboutRef];
+```
 
-    const sections = [heroRef, problemRef, solutionRef, benefitsRef, orderBumpRef, pathsRef, ctaFinalRef, aboutRef];
-    sections.forEach(ref => {
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-    });
+**SUBSTITUA por:**
+```javascript
+const sections = [heroRef, problemRef, dadRef, solutionRef, benefitsRef, orderBumpRef, pathsRef, ctaFinalRef, aboutRef];
+```
 
-    return () => observer.disconnect();
-  }, []);
+---
 
-  const handleCTAClick = () => {
-    window.open('https://pay.hotmart.com/E105156116F?sck=HOTMART_PRODUCT_PAGE&off=yfqvil0i&hotfeature=32&_gl=1*v4zddi*_gcl_au*MjAwNzIzMTY5NC4xNzc0NTcyNzI4*FPAU*MjAwNzIzMTY5NC4xNzc0NTcyNzI4*_ga*MTY2MjY4MjY5NS4xNzc0NTcyNzI4*_ga_GQH2V1F11Q*czE3NzQ5MTgxNDgkbzMkZzEkdDE3NzQ5MTk4NTgkajQwJGwwJGgxNDA1NDAyMzA5&bid=1774919860508', '_blank');
-  };
+### 🎯 MUDANÇA 2: Adicionar Seção D.A.D. (ANTES da seção Problem)
 
-  const handleScrollDown = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: 'smooth'
-    });
-  };
-
-  return (
-    <div className="landing-page">
-      {/* Header */}
-      <header className="header">
-        <div className="container-custom">
-          <div className="header-content">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_abd74624-8c37-4178-965b-183ce044e1e6/artifacts/bzan0pa6_chat-use-essa-imagem-e-troca-o-nome-que-_UFhLqRtiS8uQmbAPg--yUA_Po_BQ1shQg-bb8VABAZo4w_sd.jpeg" 
-              alt="The CoffeeBrands" 
-              className="logo"
-            />
-            <h1 className="header-brand-name">The CoffeeBrands</h1>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="hero-section fade-in" ref={heroRef}>
-        <div className="container-custom">
-          <div className="hero-content">
-            <h1 className="hero-title">
-              Você não está sendo ignorado por falta de esforço.
-              <span className="highlight-text"> Está sendo ignorado porque ninguém entende o que você faz.</span>
-            </h1>
-            
-            <p className="hero-subtitle">
-              Enquanto você posta sem clareza…<br />
-              Alguém menos preparado está ocupando seu espaço.
-            </p>
-
-            <p className="hero-description">
-              Isso não é problema de conteúdo.<br />
-              <strong>É problema de posicionamento.</strong>
-            </p>
-
-            <Button 
-              onClick={handleCTAClick}
-              className="cta-button cta-primary"
-              size="lg"
-            >
-              Quero Meu Agente Agora!
-              <ArrowRight className="ml-2" />
-            </Button>
-
-            <ChevronDown 
-              className="scroll-indicator" 
-              onClick={handleScrollDown}
-              style={{ cursor: 'pointer' }}
-            />
-          </div>
-        </div>
-      </section>
-
+**PROCURE por:**
+```javascript
       {/* Problem Section */}
       <section className="problem-section fade-in" ref={problemRef}>
+```
+
+**ADICIONE ANTES (logo após fechar a Hero Section):**
+```javascript
+      {/* D.A.D. Section - Diagnóstico Autoridade Digital */}
+      <section className="dad-section fade-in" ref={dadRef}>
         <div className="container-custom">
-          <div className="section-header">
-            <h2 className="section-title">
-              Sem posicionamento, você vira só mais um.
+          <h2 className="section-title text-center mb-12">
+            Os 3 Gaps Que Estão Travando Suas Vendas
+          </h2>
+
+          <div className="gaps-grid">
+            <Card className="gap-card">
+              <CardContent className="gap-content">
+                <div className="gap-number">Gap 01</div>
+                <h3 className="gap-title">Posicionamento vago</h3>
+                <p className="gap-text">
+                  Sua marca não ocupa um lugar claro na mente do seu público. As pessoas até gostam do seu conteúdo — mas na hora de comprar, escolhem quem parece mais específico, mais especialista, mais certo para elas.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="gap-card">
+              <CardContent className="gap-content">
+                <div className="gap-number">Gap 02</div>
+                <h3 className="gap-title">Mensagem que não converte</h3>
+                <p className="gap-text">
+                  Você fala sobre o que faz, mas não sobre o que transforma. Sua audiência não compra serviços — compra resultados. Se a sua mensagem não mostra a transformação com clareza, ela passa direto.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="gap-card">
+              <CardContent className="gap-content">
+                <div className="gap-number">Gap 03</div>
+                <h3 className="gap-title">Percepção de valor baixa</h3>
+                <p className="gap-text">
+                  Não importa o quanto você entrega — se a percepção que o mercado tem da sua marca não reflete isso, você vai continuar competindo por preço com quem entrega menos que você.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="dad-intro">
+            <h2 className="dad-intro-title">
+              O D.A.D. (Diagnóstico Autoridade Digital)
             </h2>
+            <p className="dad-intro-subtitle">
+              É o núcleo do Agente de Posicionamento Magnético.
+            </p>
+            <p className="dad-intro-text">
+              Ele foi desenvolvido para fazer em 20 minutos o que uma consultoria de branding leva semanas para entregar: mapear os 3 gaps que impedem sua marca de vender e devolver um plano de ação claro, específico e pronto para aplicar.
+            </p>
+
+            <div className="dad-not-list">
+              <p>Não é um curso com aulas para assistir.</p>
+              <p>Não é um PDF com dicas genéricas.</p>
+              <p>Não é uma consultoria cara com meses de espera.</p>
+            </div>
+
+            <p className="dad-intro-conclusion">
+              É <strong>inteligência de marca sob demanda</strong> — treinada especificamente para empreendedores digitais que produzem conteúdo mas não convertem.
+            </p>
           </div>
 
-          <div className="problem-grid">
-            <Card className="problem-card">
-              <CardContent className="problem-card-content">
-                <Target className="problem-icon" />
-                <h3>Você compete por preço</h3>
-                <p>Sem diferenciação clara, o cliente sempre vai escolher o mais barato.</p>
-              </CardContent>
-            </Card>
+          <div className="dad-steps">
+            <h3 className="dad-steps-title">Como Funciona</h3>
+            
+            <div className="step-item">
+              <div className="step-number">01</div>
+              <div className="step-content">
+                <h4>Você acessa o agente</h4>
+                <p>Um clique. Sem cadastro, sem instalação, sem complicação. O agente já está pronto para trabalhar pela sua marca.</p>
+              </div>
+            </div>
 
-            <Card className="problem-card">
-              <CardContent className="problem-card-content">
-                <TrendingUp className="problem-icon" />
-                <h3>Seu conteúdo não gera autoridade</h3>
-                <p>Você publica constantemente, mas não é visto como referência no seu mercado.</p>
-              </CardContent>
-            </Card>
+            <div className="step-item">
+              <div className="step-number">02</div>
+              <div className="step-content">
+                <h4>Responde perguntas estratégicas</h4>
+                <p>O agente faz as perguntas certas — as mesmas que um consultor de branding levaria horas para fazer. Sobre seu nicho, seu público, sua voz e seu diferencial.</p>
+              </div>
+            </div>
 
-            <Card className="problem-card">
-              <CardContent className="problem-card-content">
-                <Zap className="problem-icon" />
-                <h3>As pessoas te acham interessante… mas não compram</h3>
-                <p>Engajamento existe, mas conversão não acontece. Falta clareza no que você oferece.</p>
-              </CardContent>
-            </Card>
+            <div className="step-item">
+              <div className="step-number">03</div>
+              <div className="step-content">
+                <h4>Recebe seu diagnóstico completo</h4>
+                <p>Em menos de 20 minutos, você sai com posicionamento definido, mensagem de marca clara e um plano para fechar os 3 gaps que estavam travando suas vendas.</p>
+              </div>
+            </div>
           </div>
 
-          <div className="problem-conclusion">
-            <p className="conclusion-text">
-              O problema não é falta de esforço.<br />
-              <strong>É que sua mensagem não conecta.</strong>
+          <div className="dad-about-box">
+            <h4>Por que confiar no D.A.D.?</h4>
+            <p>
+              A The Coffee Brands não é uma agência comum. Somos especialistas em transformar a percepção de marcas — porque sabemos que o mercado não compra o melhor produto. Compra o produto que parece melhor.
+            </p>
+            <p>
+              O Agente de Posicionamento Magnético com o D.A.D. nasceu da nossa metodologia de branding aplicada a dezenas de marcas. Agora, pela primeira vez, você acessa essa inteligência direto — sem precisar contratar uma agência.
             </p>
           </div>
         </div>
       </section>
+```
 
-      {/* Solution Section */}
-      <section className="solution-section fade-in" ref={solutionRef}>
-        <div className="container-custom">
-          <div className="solution-content">
-            <div className="solution-image">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_abd74624-8c37-4178-965b-183ce044e1e6/artifacts/5gx5qjuo_ChatGPT%20Image%2025%20de%20mar.%20de%202026%2C%2023_10_37.png" 
-                alt="Agente de Posicionamento Magnético" 
-                className="product-image"
-              />
-            </div>
+---
 
-            <div className="solution-text">
-              <h2 className="section-title">
-                Agente de Posicionamento Magnético
-              </h2>
+### 🎯 MUDANÇA 3: Atualizar Seção de Preço (mais atrativa)
 
-              <p className="solution-description">
-                Um sistema inteligente que:
-              </p>
-
-              <ul className="solution-list">
-                <li>
-                  <CheckCircle2 className="check-icon" />
-                  <span>Analisa sua marca</span>
-                </li>
-                <li>
-                  <CheckCircle2 className="check-icon" />
-                  <span>Identifica bloqueios invisíveis</span>
-                </li>
-                <li>
-                  <CheckCircle2 className="check-icon" />
-                  <span>Cria posicionamento claro</span>
-                </li>
-                <li>
-                  <CheckCircle2 className="check-icon" />
-                  <span>Constrói autoridade</span>
-                </li>
-              </ul>
-
+**PROCURE por:**
+```javascript
               <div className="price-box">
                 <span className="price-label">Investimento</span>
                 <div className="price-wrapper">
@@ -192,7 +151,37 @@ const Landing = () => {
                   <span className="price">Por apenas R$ 47</span>
                 </div>
               </div>
+```
 
+**SUBSTITUA por:**
+```javascript
+              <div className="price-box-premium">
+                <div className="limited-offer-badge">
+                  <Zap className="badge-icon-small" />
+                  <span>OFERTA LIMITADA</span>
+                </div>
+                
+                <div className="price-comparison">
+                  <div className="price-old-section">
+                    <span className="price-label-old">De</span>
+                    <span className="price-old-crossed">R$ 197</span>
+                  </div>
+                  
+                  <div className="discount-badge">
+                    <span>76% OFF</span>
+                  </div>
+                  
+                  <div className="price-new-section">
+                    <span className="price-label-new">Por apenas</span>
+                    <span className="price-new-highlight">R$ 47</span>
+                    <span className="price-installments">ou 12x de R$ 4,58</span>
+                  </div>
+                </div>
+              </div>
+```
+
+**PROCURE por:**
+```javascript
               <Button 
                 onClick={handleCTAClick}
                 className="cta-button cta-secondary"
@@ -201,211 +190,91 @@ const Landing = () => {
                 Quero Meu Agente Agora!
                 <ArrowRight className="ml-2" />
               </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+```
 
-      {/* Benefits Section */}
-      <section className="benefits-section fade-in" ref={benefitsRef}>
-        <div className="container-custom">
-          <h2 className="section-title text-center mb-16">
-            O que você vai conquistar
-          </h2>
+**SUBSTITUA por:**
+```javascript
+              <Button 
+                onClick={handleCTAClick}
+                className="cta-button cta-buy-now"
+                size="lg"
+              >
+                🚀 QUERO MEU AGENTE AGORA!
+                <ArrowRight className="ml-2" />
+              </Button>
+```
 
-          <div className="benefits-grid">
-            <div className="benefit-item">
-              <Sparkles className="benefit-icon" />
-              <h3>Clareza de posicionamento</h3>
-              <p>Saiba exatamente o que você faz e como comunicar isso.</p>
-            </div>
+---
 
-            <div className="benefit-item">
-              <Target className="benefit-icon" />
-              <h3>Estrutura de marca</h3>
-              <p>Base sólida para construir autoridade no mercado.</p>
-            </div>
+### 🎯 MUDANÇA 4: Atualizar Bônus (2 bônus novos)
 
-            <div className="benefit-item">
-              <TrendingUp className="benefit-icon" />
-              <h3>Autoridade digital</h3>
-              <p>Seja reconhecido como referência no seu segmento.</p>
-            </div>
+**PROCURE por toda a seção orderBumpRef e SUBSTITUA por:**
 
-            <div className="benefit-item">
-              <Zap className="benefit-icon" />
-              <h3>Estratégia de conteúdo</h3>
-              <p>Conteúdo que gera conexão e conversão.</p>
-            </div>
-
-            <div className="benefit-item">
-              <CheckCircle2 className="benefit-icon" />
-              <h3>Mensagem que conecta</h3>
-              <p>Comunicação clara que atrai seu cliente ideal.</p>
-            </div>
-
-            <div className="benefit-item">
-              <Brain className="benefit-icon" />
-              <h3>Percepção premium</h3>
-              <p>Eleve o valor percebido da sua marca.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+```javascript
       {/* Order Bump Section */}
       <section className="order-bump-section fade-in" ref={orderBumpRef}>
         <div className="container-custom">
-          <div className="order-bump-card">
-            <div className="order-bump-badge">
-              <Sparkles className="badge-icon" />
-              <span>Bônus somente de pré venda</span>
-            </div>
+          <h2 className="bonus-section-title">
+            🎁 Bônus Exclusivos de Pré-Venda
+          </h2>
+          
+          <div className="bonus-grid">
+            <Card className="bonus-card">
+              <CardContent className="bonus-content">
+                <div className="bonus-badge">
+                  <Sparkles className="badge-icon" />
+                  <span>Bônus 1</span>
+                </div>
 
-            <h2 className="order-bump-title">
-              Estratégia para crescer no Instagram
-            </h2>
-
-            <div className="order-bump-content">
-              <div className="order-bump-text">
-                <h3 className="product-name">
+                <h3 className="bonus-title">
                   <TrendingUp className="inline-icon" />
-                  Como vender pelo Instagram em 2026
+                  Estratégias para Crescer no Instagram e se tornar Autoridade Master
                 </h3>
 
-                <p className="order-bump-description">
-                  Você adquirindo hoje, você vai receber o como vender pelo Instagram em 2026.
+                <p className="bonus-description">
+                  Revelo estratégias para você crescer no Instagram e imprimir dinheiro.
                 </p>
 
-                <p className="order-bump-highlight">
-                  Aprenda a se posicionar como um leão, e transforme seu Instagram numa máquina de vendas.
-                </p>
-
-                <p className="order-bump-promo">
-                  Comprando hoje, você não paga nada por este bônus!
-                </p>
-              </div>
-
-              <div className="order-bump-pricing">
-                <div className="price-box-secondary">
-                  <span className="price-label">Valor Normal</span>
-                  <span className="price-old-large">De R$ 197</span>
-                  <span className="price-free">GRÁTIS</span>
+                <div className="bonus-value">
+                  <span className="bonus-price-old">De R$ 197</span>
+                  <span className="bonus-price-free">GRÁTIS</span>
                 </div>
-                
-                <Button 
-                  onClick={handleCTAClick}
-                  className="cta-button cta-bonus"
-                  size="lg"
-                >
-                  Garantir Meu Bônus Grátis!
-                  <ArrowRight className="ml-2" />
-                </Button>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bonus-card">
+              <CardContent className="bonus-content">
+                <div className="bonus-badge">
+                  <Sparkles className="badge-icon" />
+                  <span>Bônus 2</span>
+                </div>
+
+                <h3 className="bonus-title">
+                  <Target className="inline-icon" />
+                  Como Vender pelo Instagram 2026
+                </h3>
+
+                <p className="bonus-description">
+                  Método The Coffee Brands para você vender pelo Instagram com poucos seguidores.
+                </p>
+
+                <div className="bonus-value">
+                  <span className="bonus-price-old">De R$ 197</span>
+                  <span className="bonus-price-free">GRÁTIS</span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
+
+          <p className="bonus-total-value">
+            🔥 Valor total dos bônus: <strong>R$ 394</strong> - GRÁTIS comprando hoje!
+          </p>
         </div>
       </section>
+```
 
-      {/* Two Paths Section */}
-      <section className="paths-section fade-in" ref={pathsRef}>
-        <div className="container-custom">
-          <h2 className="paths-title">VOCÊ TEM DOIS CAMINHOS</h2>
+---
 
-          <div className="paths-grid">
-            <div className="path-card path-success">
-              <div className="path-number">Caminho 1</div>
-              <div className="path-icon-success">
-                <TrendingUp size={48} />
-              </div>
-              <p className="path-text">
-                Adquirir o agente para crescer no Instagram e imprimir dinheiro pela internet
-              </p>
-            </div>
+## ⏭️ PRÓXIMO PASSO: Atualizar o CSS
 
-            <div className="path-card path-failure">
-              <div className="path-number">Caminho 2</div>
-              <div className="path-icon-failure">
-                <Target size={48} />
-              </div>
-              <p className="path-text">
-                Você continua na mesma, fracassado e sem dinheiro, e vendo os outros na internet fazer dinheiro e <strong>VOCÊ NÃO</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="cta-final-section fade-in" ref={ctaFinalRef}>
-        <div className="container-custom">
-          <div className="cta-final-content">
-            <h2 className="cta-final-title">
-              Pare de ser ignorado.<br />
-              <span className="highlight-text">Comece a ser escolhido.</span>
-            </h2>
-
-            <Button 
-              onClick={handleCTAClick}
-              className="cta-button cta-final-button"
-              size="lg"
-            >
-              Quero Construir a minha Marca!
-              <ArrowRight className="ml-2" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* About The CoffeeBrands Section */}
-      <section className="about-section fade-in" ref={aboutRef}>
-        <div className="container-custom">
-          <div className="about-content">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_abd74624-8c37-4178-965b-183ce044e1e6/artifacts/bzan0pa6_chat-use-essa-imagem-e-troca-o-nome-que-_UFhLqRtiS8uQmbAPg--yUA_Po_BQ1shQg-bb8VABAZo4w_sd.jpeg" 
-              alt="The CoffeeBrands" 
-              className="about-logo"
-            />
-
-            <h2 className="about-title">
-              Sobre a The CoffeeBrands
-            </h2>
-
-            <div className="about-text">
-              <p>A The CoffeeBrands transforma boas ideias em marcas que fazem sentido. Apenas posicionamento claro e construção consistente. Porque as melhores marcas não convencem — elas são escolhidas.</p>
-
-              <p className="about-signature">The CoffeeBrands</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container-custom">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_abd74624-8c37-4178-965b-183ce044e1e6/artifacts/bzan0pa6_chat-use-essa-imagem-e-troca-o-nome-que-_UFhLqRtiS8uQmbAPg--yUA_Po_BQ1shQg-bb8VABAZo4w_sd.jpeg" 
-            alt="The CoffeeBrands" 
-            className="footer-logo"
-          />
-          
-          <div className="footer-content">
-            <p className="footer-by">BY: Glauber e Guilherme</p>
-            
-            <p className="footer-description">
-              Hoje ajudamos empreendedores a transformar seu Instagram em autoridade digital para imprimir dinheiro.
-            </p>
-            
-            <p className="footer-achievement">
-              Construindo a The Coffee Brands, atraímos +400 seguidores em 5 dias com 5 posts
-            </p>
-          </div>
-          
-          <p className="footer-copyright">© 2026 The CoffeeBrands. Todos os direitos reservados.</p>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Landing;
+Veja o arquivo `LANDING_CSS_UPDATES.md` para as mudanças no CSS!
