@@ -1254,3 +1254,7 @@ font-weight: 600;
 .dad-errors {
 margin-bottom: 80px;
 }
+.highlight-green {
+color: #00ff9c;
+font-weight: 600;
+}
