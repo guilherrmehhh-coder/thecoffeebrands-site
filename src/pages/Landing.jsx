@@ -84,11 +84,15 @@ const Landing = () => {
               <strong>É problema de posicionamento.</strong>
             </p>
 
-            <Button 
-              onClick={handleCTAClick}
-              className="cta-button cta-primary"
-              size="lg"
-            >
+         <Button 
+  onClick={() => {
+    document.getElementById('oferta').scrollIntoView({
+      behavior: 'smooth'
+    });
+  }}
+  className="cta-button cta-primary"
+  size="lg"
+>
               Quero Meu Agente Agora!
               <ArrowRight className="ml-2" />
             </Button>
@@ -245,7 +249,7 @@ Ele identifica os 3 ERROS da sua marca e entrega um plano claro e pronto para ap
       </section>
 
       {/* Solution Section */}
-      <section className="solution-section fade-in" ref={solutionRef}>
+      <section id="oferta" className="solution-section fade-in" ref={solutionRef}>
         <div className="container-custom">
           <div className="solution-content">
             <div className="solution-image">
