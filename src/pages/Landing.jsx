@@ -187,9 +187,6 @@ Ele identifica os 3 ERROS da sua marca e entrega um plano claro e pronto para ap
 
 </div>
 </div>
-          </div>
-
-         
 
           <div className="dad-about-box">
             <h4>Por que confiar no D.A.D.?</h4>
