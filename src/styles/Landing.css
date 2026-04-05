@@ -295,9 +295,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
 }
 
 .problem-grid {
@@ -1088,6 +1087,141 @@ html {
 /* ========================================
    NOVA SEÇÃO D.A.D.
 ======================================== */
+/* ===== D.A.D SECTION ===== */
+
+.dad-section {
+  padding: 8rem 0;
+}
+
+.dad-section .section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #aaa;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.highlight-red {
+  color: #ff3b3b;
+  font-weight: 700;
+}
+
+.highlight-green {
+  color: #22c55e;
+  font-weight: 700;
+}
+
+/* ===== CARDS ===== */
+
+.gaps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.gap-card {
+  background: #0b0b0b;
+  border: 1px solid #1e1e1e;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.gap-card:hover {
+  border-color: #333;
+  transform: translateY(-4px);
+}
+
+.gap-content {
+  padding: 28px;
+}
+
+.gap-title {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.gap-content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.gap-text {
+  font-size: 15px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* ===== DAD INTRO ===== */
+
+.dad-intro {
+  margin-top: 60px;
+  max-width: 750px;
+}
+
+.dad-intro-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.dad-intro-text {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.dad-not-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dad-not-list p {
+  font-size: 16px;
+  color: #999;
+}
+
+.dad-intro-conclusion {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 1024px) {
+
+.section-title {
+  font-size: 32px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+}
+
+.gaps-grid {
+  grid-template-columns: 1fr;
+}
+
+.gap-content h4 {
+  font-size: 20px;
+}
+
+.dad-intro-title {
+  font-size: 24px;
+}
+
+.dad-intro-text {
+  font-size: 16px;
+}
+
+}
 
 .dad-section {
   padding: 8rem 0;
@@ -1257,4 +1391,24 @@ margin-bottom: 80px;
 .highlight-green {
 color: #00ff9c;
 font-weight: 600;
+}
+
+.dad-errors .section-title {
+font-size: clamp(2.8rem, 5vw, 3.8rem);
+margin-bottom: 20px;
+}
+
+.dad-errors .section-subtitle {
+font-size: 18px;
+max-width: 700px;
+margin: 0 auto 40px auto;
+}
+.gap-content h4{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.gap-text{
+font-size:16px;
+line-height:1.6;
 }
