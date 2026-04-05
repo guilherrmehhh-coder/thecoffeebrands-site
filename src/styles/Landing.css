@@ -1201,3 +1201,41 @@ html {
   font-size:2.5rem;
   font-weight:700;
 }
+.price-box-premium {
+border: 1px solid #00ff9c;
+padding: 30px;
+border-radius: 14px;
+text-align: center;
+margin: 20px 0;
+background: rgba(0,255,156,0.03);
+}
+
+.offer-badge {
+color: #ff3b3b;
+font-weight: 600;
+margin-bottom: 10px;
+}
+
+.price-old span {
+text-decoration: line-through;
+color: #ff3b3b;
+font-size: 18px;
+}
+
+.price-discount {
+color: #ff3b3b;
+font-size: 14px;
+margin: 5px 0;
+}
+
+.price-new {
+font-size: 42px;
+font-weight: 700;
+color: #00ff9c;
+margin: 10px 0;
+}
+
+.price-installments {
+color: #aaa;
+font-size: 14px;
+}
