@@ -484,11 +484,11 @@ const Landing = () => {
       <section className="about-section fade-in" ref={aboutRef}>
         <div className="container-custom">
           <div className="about-content">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_abd74624-8c37-4178-965b-183ce044e1e6/artifacts/bzan0pa6_chat-use-essa-imagem-e-troca-o-nome-que-_UFhLqRtiS8uQmbAPg--yUA_Po_BQ1shQg-bb8VABAZo4w_sd.jpeg" 
-              alt="The CoffeeBrands" 
-              className="about-logo"
-            />
+        <img 
+src="https://raw.githubusercontent.com/guilherrmehhh-coder/thecoffeebrands-site/main/Logotipo%20da%20CoffeeBrands%20com%20x%C3%ADcara%20de%20caf%C3%A9.png"
+alt="The CoffeeBrands"
+className="about-logo"
+/>
 
             <h2 className="about-title">
               Sobre a The CoffeeBrands
@@ -506,11 +506,11 @@ const Landing = () => {
       {/* Footer */}
       <footer className="footer">
         <div className="container-custom">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_abd74624-8c37-4178-965b-183ce044e1e6/artifacts/bzan0pa6_chat-use-essa-imagem-e-troca-o-nome-que-_UFhLqRtiS8uQmbAPg--yUA_Po_BQ1shQg-bb8VABAZo4w_sd.jpeg" 
-            alt="The CoffeeBrands" 
-            className="footer-logo"
-          />
+        <img 
+src="https://raw.githubusercontent.com/guilherrmehhh-coder/thecoffeebrands-site/main/Logotipo%20da%20CoffeeBrands%20com%20x%C3%ADcara%20de%20caf%C3%A9.png"
+alt="The CoffeeBrands" 
+className="footer-logo"
+/>
           
           <div className="footer-content">
             <p className="footer-by">BY: Glauber e Guilherme</p>
