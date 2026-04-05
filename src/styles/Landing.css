@@ -1462,3 +1462,80 @@ width: 100%;
 max-width: 420px;
 margin: 25px auto 0;
 }
+.gap-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff4d4d;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .gap-title {
+    font-size: 18px;
+  }
+}
+.section-subtitle {
+font-size: 20px;
+line-height: 1.6;
+}
+
+.section-subtitle .highlight-red {
+font-size: 22px;
+font-weight: 700;
+}
+.price-new {
+font-size: 56px;
+font-weight: 700;
+}
+
+.price-installments {
+font-size: 16px;
+margin-top: 12px;
+}
+
+.offer-badge {
+font-size: 18px;
+}
+
+.price-discount {
+font-size: 16px;
+}
+.cta-buy-now {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+width: 100%;
+max-width: 420px;
+margin: 25px auto 0;
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+
+.cta-buy-now:hover {
+transform: translateY(-3px);
+box-shadow: 0 15px 35px rgba(0,255,156,0.2);
+}
+
+/* efeito brilho */
+.cta-buy-now::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.2),
+transparent
+);
+transition: 0.6s;
+}
+
+.cta-buy-now:hover::before {
+left: 100%;
+}
