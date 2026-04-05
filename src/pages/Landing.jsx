@@ -287,7 +287,7 @@ Ele identifica os 3 ERROS da sua marca e entrega um plano claro e pronto para ap
              <div className="price-box-premium">
 
   <div className="offer-badge">
-    🔥 Oferta Limitada
+    🔥 Oferta de Lançamento
   </div>
 
   <div className="price-wrapper-premium">
@@ -304,9 +304,9 @@ Ele identifica os 3 ERROS da sua marca e entrega um plano claro e pronto para ap
       R$ 47
     </div>
 
-    <div className="price-installments">
-      ou 12x de R$ 4,58
-    </div>
+  <p className="price-installments">
+ou 6x de R$ 8,82 no cartão • acesso imediato
+</p>
 
   </div>
 
