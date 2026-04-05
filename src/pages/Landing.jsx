@@ -106,91 +106,90 @@ const Landing = () => {
       {/* D.A.D. Section - Diagnóstico Autoridade Digital */}
       <section className="dad-section fade-in" ref={dadRef}>
         <div className="container-custom">
-          <h2 className="section-title text-center mb-12">
-  O que está impedindo sua marca de crescer
+        
+          <div className="dad-errors">
+ <h2 className="section-title text-center mb-6">
+  O problema não é o seu conteúdo
 </h2>
-           
 
-          <div className="gaps-grid">
-            <Card className="gap-card">
-              <CardContent className="gap-content">
-                                <h3 className="gap-title">Sua marca não ocupa um espaço claro</h3>
-               <p className="gap-text">
-  Sua audiência até acompanha seu conteúdo. Mas, na hora de comprar, escolhe quem parece mais especialista, mais claro e mais certo para ela.
-</p>
-              </CardContent>
-            </Card>
+<h3 className="section-subtitle text-center mb-12">
+  São os 3 <span className="highlight-red">ERROS</span> invisíveis que impedem sua marca de vender
+</h3>
 
-            <Card className="gap-card">
-              <CardContent className="gap-content">
-                
-                <h3 className="gap-title">Sua mensagem não gera decisão</h3>
-               <p className="gap-text">
-  Você explica o que faz, mas não mostra com clareza o resultado que entrega. E quando não há clareza, não há decisão.
+<p className="section-subtitle text-center mb-12">
+  Todo empreendedor que produz conteúdo sem resultado comete os mesmos 3 erros — e nenhum deles é resolvido postando mais.
 </p>
-              </CardContent>
-            </Card>
 
-            <Card className="gap-card">
-              <CardContent className="gap-content">
-                
-                <h3 className="gap-title">Você entrega valor, mas não parece</h3>
-               <p className="gap-text">
-  Não importa o quanto você entrega. Se a percepção da sua marca não acompanha esse valor, você continua sendo comparado por preço.
+<div className="gaps-grid">
+
+<Card className="gap-card">
+<CardContent className="gap-content">
+<h3 className="gap-title">ERRO 01</h3>
+<h4>Posicionamento vago</h4>
+<p className="gap-text">
+Sua marca não ocupa um lugar claro na mente do público.
+As pessoas até gostam do seu conteúdo — mas escolhem quem parece mais especialista.
 </p>
-              </CardContent>
-            </Card>
+</CardContent>
+</Card>
+
+<Card className="gap-card">
+<CardContent className="gap-content">
+<h3 className="gap-title">ERRO 02</h3>
+<h4>Mensagem que não converte</h4>
+<p className="gap-text">
+Você fala sobre o que faz, mas não sobre o que transforma.
+Sem clareza na transformação, a decisão não acontece.
+</p>
+</CardContent>
+</Card>
+
+<Card className="gap-card">
+<CardContent className="gap-content">
+<h3 className="gap-title">ERRO 03</h3>
+<h4>Percepção de valor baixa</h4>
+<p className="gap-text">
+Você entrega valor, mas não parece.
+Sem percepção forte, você continua competindo por preço.
+</p>
+</CardContent>
+</Card>
+
+</div>
+
+<div className="dad-intro">
+
+<h2 className="dad-intro-title">
+O D.A.D. (Diagnóstico Autoridade Digital)
+</h2>
+
+<p className="dad-intro-text">
+Ele foi desenvolvido para fazer em 
+<span className="highlight-green"> 20 MINUTOS </span> 
+o que uma consultoria leva 
+<span className="highlight-red"> SEMANAS </span> 
+para entregar.
+</p>
+
+<p className="dad-intro-text">
+Ele identifica os 3 ERROS da sua marca e entrega um plano claro e pronto para aplicar.
+</p>
+
+<div className="dad-not-list">
+<p>Não é um curso</p>
+<p>Não é um PDF</p>
+<p>Não é uma consultoria cara</p>
+</div>
+
+<p className="dad-intro-conclusion">
+É <strong>inteligência de marca sob demanda</strong>
+</p>
+
+</div>
+</div>
           </div>
 
-          <div className="dad-intro">
-            <h2 className="dad-intro-title">
-              O D.A.D. (Diagnóstico Autoridade Digital)
-            </h2>
-            <p className="dad-intro-subtitle">
-              É o núcleo do Agente de Posicionamento Magnético.
-            </p>
-            <p className="dad-intro-text">
-              Ele foi desenvolvido para fazer em 20 minutos o que uma consultoria de branding leva semanas para entregar: mapear os 3 gaps que impedem sua marca de vender e devolver um plano de ação claro, específico e pronto para aplicar.
-            </p>
-
-            <div className="dad-not-list">
-              <p>Não é um curso com aulas para assistir.</p>
-              <p>Não é um PDF com dicas genéricas.</p>
-              <p>Não é uma consultoria cara com meses de espera.</p>
-            </div>
-
-            <p className="dad-intro-conclusion">
-              É <strong>inteligência de marca sob demanda</strong> — treinada especificamente para empreendedores digitais que produzem conteúdo mas não convertem.
-            </p>
-          </div>
-
-          <div className="dad-steps">
-            <h3 className="dad-steps-title">Como Funciona</h3>
-            
-            <div className="step-item">
-              <div className="step-number">01</div>
-              <div className="step-content">
-                <h4>Você acessa o agente</h4>
-                <p>Um clique. Sem cadastro, sem instalação, sem complicação. O agente já está pronto para trabalhar pela sua marca.</p>
-              </div>
-            </div>
-
-            <div className="step-item">
-              <div className="step-number">02</div>
-              <div className="step-content">
-                <h4>Responde perguntas estratégicas</h4>
-                <p>O agente faz as perguntas certas — as mesmas que um consultor de branding levaria horas para fazer. Sobre seu nicho, seu público, sua voz e seu diferencial.</p>
-              </div>
-            </div>
-
-            <div className="step-item">
-              <div className="step-number">03</div>
-              <div className="step-content">
-                <h4>Recebe seu diagnóstico completo</h4>
-                <p>Em menos de 20 minutos, você sai com posicionamento definido, mensagem de marca clara e um plano para fechar os 3 gaps que estavam travando suas vendas.</p>
-              </div>
-            </div>
-          </div>
+         
 
           <div className="dad-about-box">
             <h4>Por que confiar no D.A.D.?</h4>
