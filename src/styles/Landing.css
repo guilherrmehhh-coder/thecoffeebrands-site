@@ -1412,3 +1412,44 @@ margin-bottom:10px;
 font-size:16px;
 line-height:1.6;
 }
+.gap-content h4 {
+color: #ffffff;
+font-size: 22px;
+font-weight: 600;
+margin-bottom: 10px;
+letter-spacing: -0.3px;
+}
+
+.gap-title {
+color: #888;
+font-size: 14px;
+font-weight: 600;
+margin-bottom: 6px;
+}
+
+.gap-text {
+color: #bdbdbd;
+font-size: 16px;
+line-height: 1.6;
+}
+.cta-buy-now {
+width: 100%;
+max-width: 420px;
+margin: 20px auto 0 auto;
+display: block;
+text-align: center;
+}
+.solution-content {
+align-items: center;
+}
+
+.solution-text {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.price-installments {
+font-size: 15px;
+color: #9ca3af;
+margin-top: 8px;
+}
