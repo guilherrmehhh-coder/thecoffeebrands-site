@@ -1,7 +1,3 @@
-# 🔄 MUDANÇAS RÁPIDAS - Copie e Cole
-
-## Arquivo: src/pages/Landing.jsx
-
 ### 🎯 MUDANÇA 1: Adicionar ref da nova seção D.A.D.
 
 **PROCURE por (linha ~14):**
