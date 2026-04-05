@@ -107,37 +107,37 @@ const Landing = () => {
       <section className="dad-section fade-in" ref={dadRef}>
         <div className="container-custom">
           <h2 className="section-title text-center mb-12">
-            Os 3 Gaps Que Estão Travando Suas Vendas
-          </h2>
+  O que está impedindo sua marca de crescer
+</h2>
+           
 
           <div className="gaps-grid">
             <Card className="gap-card">
               <CardContent className="gap-content">
-                <div className="gap-number">Gap 01</div>
-                <h3 className="gap-title">Posicionamento vago</h3>
-                <p className="gap-text">
-                  Sua marca não ocupa um lugar claro na mente do seu público. As pessoas até gostam do seu conteúdo — mas na hora de comprar, escolhem quem parece mais específico, mais especialista, mais certo para elas.
-                </p>
+                                <h3 className="gap-title">Sua marca não ocupa um espaço claro</h3>
+               <p className="gap-text">
+  Sua audiência até acompanha seu conteúdo. Mas, na hora de comprar, escolhe quem parece mais especialista, mais claro e mais certo para ela.
+</p>
               </CardContent>
             </Card>
 
             <Card className="gap-card">
               <CardContent className="gap-content">
-                <div className="gap-number">Gap 02</div>
-                <h3 className="gap-title">Mensagem que não converte</h3>
-                <p className="gap-text">
-                  Você fala sobre o que faz, mas não sobre o que transforma. Sua audiência não compra serviços — compra resultados. Se a sua mensagem não mostra a transformação com clareza, ela passa direto.
-                </p>
+                
+                <h3 className="gap-title">Sua mensagem não gera decisão</h3>
+               <p className="gap-text">
+  Você explica o que faz, mas não mostra com clareza o resultado que entrega. E quando não há clareza, não há decisão.
+</p>
               </CardContent>
             </Card>
 
             <Card className="gap-card">
               <CardContent className="gap-content">
-                <div className="gap-number">Gap 03</div>
-                <h3 className="gap-title">Percepção de valor baixa</h3>
-                <p className="gap-text">
-                  Não importa o quanto você entrega — se a percepção que o mercado tem da sua marca não reflete isso, você vai continuar competindo por preço com quem entrega menos que você.
-                </p>
+                
+                <h3 className="gap-title">Você entrega valor, mas não parece</h3>
+               <p className="gap-text">
+  Não importa o quanto você entrega. Se a percepção da sua marca não acompanha esse valor, você continua sendo comparado por preço.
+</p>
               </CardContent>
             </Card>
           </div>
@@ -289,27 +289,31 @@ const Landing = () => {
               </ul>
 
              <div className="price-box-premium">
-  <div className="limited-offer-badge">
-    <Zap className="badge-icon-small" />
-    <span>OFERTA LIMITADA</span>
+
+  <div className="offer-badge">
+    🔥 Oferta Limitada
   </div>
 
-  <div className="price-comparison">
-    <div className="price-old-section">
-      <span className="price-label-old">De</span>
-      <span className="price-old-crossed">R$ 197</span>
+  <div className="price-wrapper-premium">
+
+    <div className="price-old">
+      De <span>R$ 197</span>
     </div>
 
-    <div className="discount-badge">
-      <span>76% OFF</span>
+    <div className="price-discount">
+      76% OFF
     </div>
 
-    <div className="price-new-section">
-      <span className="price-label-new">Por apenas</span>
-      <span className="price-new-highlight">R$ 47</span>
-      <span className="price-installments">ou 12x de R$ 4,58</span>
+    <div className="price-new">
+      R$ 47
     </div>
+
+    <div className="price-installments">
+      ou 12x de R$ 4,58
+    </div>
+
   </div>
+
 </div>
 
               <Button 
