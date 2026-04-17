@@ -6,6 +6,7 @@ import { Card, CardContent } from '../components/ui/card';
 const Landing = () => {
   const heroRef = useRef(null);
   const problemRef = useRef(null);
+  const dadRef = useRef(null);
   const solutionRef = useRef(null);
   const benefitsRef = useRef(null);
   const orderBumpRef = useRef(null);
@@ -27,7 +28,7 @@ const Landing = () => {
       });
     }, observerOptions);
 
-    const sections = [heroRef, problemRef, solutionRef, benefitsRef, orderBumpRef, pathsRef, ctaFinalRef, aboutRef];
+    const sections = [heroRef, problemRef, dadRef, solutionRef, benefitsRef, orderBumpRef, pathsRef, ctaFinalRef, aboutRef];
     sections.forEach(ref => {
       if (ref.current) {
         observer.observe(ref.current);
@@ -94,11 +95,15 @@ const handleCTAClick = () => {
               <strong>É problema de posicionamento.</strong>
             </p>
 
-            <Button 
-              onClick={handleCTAClick}
-              className="cta-button cta-primary"
-              size="lg"
-            >
+         <Button 
+  onClick={() => {
+    document.getElementById('oferta').scrollIntoView({
+      behavior: 'smooth'
+    });
+  }}
+  className="cta-button cta-primary"
+  size="lg"
+>
               Quero Meu Agente Agora!
               <ArrowRight className="ml-2" />
             </Button>
@@ -108,6 +113,104 @@ const handleCTAClick = () => {
               onClick={handleScrollDown}
               style={{ cursor: 'pointer' }}
             />
+          </div>
+        </div>
+      </section>
+
+
+      {/* D.A.D. Section - Diagnóstico Autoridade Digital */}
+      <section className="dad-section fade-in" ref={dadRef}>
+        <div className="container-custom">
+        
+          <div className="dad-errors">
+ <h2 className="section-title text-center mb-6">
+  O problema não é o seu conteúdo
+</h2>
+
+<h3 className="section-subtitle text-center mb-12">
+  São os 3 <span className="highlight-red">ERROS</span> invisíveis que impedem sua marca de vender
+</h3>
+
+<p className="section-subtitle text-center mb-12">
+  Todo empreendedor que produz conteúdo sem resultado comete os mesmos 3 erros — e nenhum deles é resolvido postando mais.
+</p>
+
+<div className="gaps-grid">
+
+<Card className="gap-card">
+<CardContent className="gap-content">
+<h3 className="gap-title">ERRO 01</h3>
+<h4>Posicionamento vago</h4>
+<p className="gap-text">
+Sua marca não ocupa um lugar claro na mente do público.
+As pessoas até gostam do seu conteúdo — mas escolhem quem parece mais especialista.
+</p>
+</CardContent>
+</Card>
+
+<Card className="gap-card">
+<CardContent className="gap-content">
+<h3 className="gap-title">ERRO 02</h3>
+<h4>Mensagem que não converte</h4>
+<p className="gap-text">
+Você fala sobre o que faz, mas não sobre o que transforma.
+Sem clareza na transformação, a decisão não acontece.
+</p>
+</CardContent>
+</Card>
+
+<Card className="gap-card">
+<CardContent className="gap-content">
+<h3 className="gap-title">ERRO 03</h3>
+<h4>Percepção de valor baixa</h4>
+<p className="gap-text">
+Você entrega valor, mas não parece.
+Sem percepção forte, você continua competindo por preço.
+</p>
+</CardContent>
+</Card>
+
+</div>
+
+<div className="dad-intro">
+
+<h2 className="dad-intro-title">
+O D.A.D. (Diagnóstico Autoridade Digital)
+</h2>
+
+<p className="dad-intro-text">
+Ele foi desenvolvido para fazer em 
+<span className="highlight-green"> 20 MINUTOS </span> 
+o que uma consultoria leva 
+<span className="highlight-red"> SEMANAS </span> 
+para entregar.
+</p>
+
+<p className="dad-intro-text">
+Ele identifica os 3 ERROS da sua marca e entrega um plano claro e pronto para aplicar.
+</p>
+
+<div className="dad-not-list">
+<p>Não é um curso</p>
+<p>Não é um PDF</p>
+<p>Não é uma consultoria cara</p>
+</div>
+
+<p className="dad-intro-conclusion">
+É <strong>inteligência de marca sob demanda</strong>
+</p>
+
+</div>
+</div>
+
+          <div className="dad-about-box">
+            <h4>Por que confiar no D.A.D.?</h4>
+            <p>
+              A The Coffee Brands não é uma agência comum. Somos especialistas em transformar a percepção de marcas — porque sabemos que o mercado não compra o melhor produto. Compra o produto que parece melhor.
+            </p>
+            <p>
+              O Agente de Posicionamento Magnético com o D.A.D. nasceu da nossa metodologia de branding aplicada a dezenas de marcas. Agora, pela primeira vez, você acessa essa inteligência direto — sem precisar contratar uma agência.
+            </p>
           </div>
         </div>
       </section>
@@ -157,7 +260,7 @@ const handleCTAClick = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="solution-section fade-in" ref={solutionRef}>
+      <section id="oferta" className="solution-section fade-in" ref={solutionRef}>
         <div className="container-custom">
           <div className="solution-content">
             <div className="solution-image">
@@ -196,20 +299,40 @@ const handleCTAClick = () => {
                 </li>
               </ul>
 
-              <div className="price-box">
-                <span className="price-label">Investimento</span>
-                <div className="price-wrapper">
-                  <span className="price-old">De R$ 197</span>
-                  <span className="price">Por apenas R$ 47</span>
-                </div>
-              </div>
+             <div className="price-box-premium">
+
+  <div className="offer-badge">
+    🔥 Oferta de Lançamento
+  </div>
+
+  <div className="price-wrapper-premium">
+
+    <div className="price-old">
+      De <span>R$ 197</span>
+    </div>
+
+    <div className="price-discount">
+      76% OFF
+    </div>
+
+    <div className="price-new">
+      R$ 47
+    </div>
+
+  <p className="price-installments">
+ou 6x de R$ 8,82 no cartão • acesso imediato
+</p>
+
+  </div>
+
+</div>
 
               <Button 
                 onClick={handleCTAClick}
-                className="cta-button cta-secondary"
+                className="cta-button cta-buy-now"
                 size="lg"
               >
-                Quero Meu Agente Agora!
+                🚀 QUERO MEU AGENTE AGORA!
                 <ArrowRight className="ml-2" />
               </Button>
             </div>
@@ -372,11 +495,11 @@ const handleCTAClick = () => {
       <section className="about-section fade-in" ref={aboutRef}>
         <div className="container-custom">
           <div className="about-content">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_abd74624-8c37-4178-965b-183ce044e1e6/artifacts/bzan0pa6_chat-use-essa-imagem-e-troca-o-nome-que-_UFhLqRtiS8uQmbAPg--yUA_Po_BQ1shQg-bb8VABAZo4w_sd.jpeg" 
-              alt="The CoffeeBrands" 
-              className="about-logo"
-            />
+        <img 
+src="https://raw.githubusercontent.com/guilherrmehhh-coder/thecoffeebrands-site/main/Logotipo%20da%20CoffeeBrands%20com%20x%C3%ADcara%20de%20caf%C3%A9.png"
+alt="The CoffeeBrands"
+className="about-logo"
+/>
 
             <h2 className="about-title">
               Sobre a The CoffeeBrands
@@ -394,11 +517,11 @@ const handleCTAClick = () => {
       {/* Footer */}
       <footer className="footer">
         <div className="container-custom">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_abd74624-8c37-4178-965b-183ce044e1e6/artifacts/bzan0pa6_chat-use-essa-imagem-e-troca-o-nome-que-_UFhLqRtiS8uQmbAPg--yUA_Po_BQ1shQg-bb8VABAZo4w_sd.jpeg" 
-            alt="The CoffeeBrands" 
-            className="footer-logo"
-          />
+        <img 
+src="https://raw.githubusercontent.com/guilherrmehhh-coder/thecoffeebrands-site/main/Logotipo%20da%20CoffeeBrands%20com%20x%C3%ADcara%20de%20caf%C3%A9.png"
+alt="The CoffeeBrands" 
+className="footer-logo"
+/>
           
           <div className="footer-content">
             <p className="footer-by">BY: Glauber e Guilherme</p>
