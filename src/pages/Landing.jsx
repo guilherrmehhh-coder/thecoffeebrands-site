@@ -106,7 +106,10 @@ const Landing = () => {
               <ArrowRight className="ml-2" />
             </Button>
 
-            <p className="scarcity">🔒 Vagas limitadas essa semana • Pré-venda por R$47</p>
+            <p className="scarcity"><p className="scarcity">
+  🔥 Somente hoje garanta o preço de pré-venda<br/>
+  🛡️ Garantia de 7 dias apenas
+</p>
           </div>
 
           <div className="hero-panel">
