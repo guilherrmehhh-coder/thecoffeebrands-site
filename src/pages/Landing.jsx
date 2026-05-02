@@ -234,7 +234,7 @@ const Landing = () => {
               <h3>Bônus de pré-venda</h3>
               <ul>
                 <li><Sparkles /> Meus principais aprendizados com Instagram</li>
-                <li><Sparkles /> Como criar meu Branding</li>
+                <li><Sparkles /> Como criar seu Branding</li>
               </ul>
             </div>
           </div>
@@ -292,11 +292,22 @@ const Landing = () => {
           <Clock />
           <h2>Você pode continuar postando e esperando… ou pode entender exatamente o que está te travando.</h2>
 
-          <div className="paths-grid">
-            <div><strong>Caminho 1</strong><p>Age agora → começa essa semana → primeiro resultado mais rápido.</p></div>
-            <div><strong>Caminho 2</strong><p>Espera → preço sobe → vagas fecham → perde mais meses.</p></div>
-            <div><strong>Caminho 3</strong><p>Tenta sozinho → erra por 3 a 6 meses → gasta mais energia.</p></div>
-          </div>
+     <div className="paths-grid">
+  <div className="path-card path-good">
+    <strong>CAMINHO 1 — AGIR AGORA</strong>
+    <p>Você faz o Raio-X, entende o que trava sua marca e começa essa semana com um plano claro pra vender.</p>
+  </div>
+
+  <div className="path-card path-warning">
+    <strong>CAMINHO 2 — ESPERAR</strong>
+    <p>Você continua postando no escuro, o preço sobe, as vagas fecham e mais clientes compram de quem se posiciona melhor.</p>
+  </div>
+
+  <div className="path-card path-danger">
+    <strong>CAMINHO 3 — TENTAR SOZINHO</strong>
+    <p>Você perde 3 a 6 meses testando no achismo, se frustra, cansa e continua sem transformar seguidores em dinheiro.</p>
+  </div>
+</div>
 
           <Button onClick={handleCTAClick} className="cta-button cta-final-button" size="lg">
             Quero meu Raio-X agora
