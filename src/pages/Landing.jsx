@@ -249,7 +249,7 @@ const Landing = () => {
 
             <div className="guarantee">
               <ShieldCheck />
-              <span>Garantia de 14 dias: se não fizer sentido, solicite seu dinheiro de volta.</span>
+              <span>Garantia de 7 dias: se não fizer sentido, solicite seu dinheiro de volta.</span>
             </div>
 
             <Button onClick={handleCTAClick} className="cta-button cta-buy-now" size="lg">
@@ -257,7 +257,8 @@ const Landing = () => {
               <ArrowRight className="ml-2" />
             </Button>
 
-            <p className="scarcity">🔒 Vagas limitadas essa semana</p>
+            <p className="scarcity">🔥 Somente hoje garanta o preço de pré-venda<br/>
+  </p>
           </div>
         </div>
       </section>
