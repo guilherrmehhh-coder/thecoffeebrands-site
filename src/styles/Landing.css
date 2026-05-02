@@ -334,3 +334,57 @@ p { margin: 0; }
     transform: translateX(100%);
   }
 }
+.problem-card,
+.price-card,
+.bonus-box {
+  position: relative;
+  overflow: hidden;
+  animation: premiumPulse 3.2s ease-in-out infinite;
+}
+
+.problem-card::before,
+.price-card::before,
+.bonus-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(197,160,89,0.14),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: premiumShine 4s infinite;
+  pointer-events: none;
+}
+
+.price-card {
+  animation-delay: 0.4s;
+}
+
+.bonus-box {
+  animation-delay: 0.8s;
+}
+
+@keyframes premiumPulse {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(197,160,89,0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(197,160,89,0.12);
+  }
+}
+
+@keyframes premiumShine {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  45%, 100% {
+    transform: translateX(100%);
+  }
+}
