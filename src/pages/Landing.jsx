@@ -106,9 +106,8 @@ const Landing = () => {
               <ArrowRight className="ml-2" />
             </Button>
 
-            <p className="scarcity"><p className="scarcity">
+   <p className="scarcity">
   🔥 Somente hoje garanta o preço de pré-venda<br/>
-  🛡️ Garantia de 7 dias apenas
 </p>
           </div>
 
@@ -257,8 +256,9 @@ const Landing = () => {
               <ArrowRight className="ml-2" />
             </Button>
 
-            <p className="scarcity">🔥 Somente hoje garanta o preço de pré-venda<br/>
-  </p>
+            <p className="scarcity">
+  🔥 Somente hoje garanta o preço de pré-venda
+</p>
           </div>
         </div>
       </section>
