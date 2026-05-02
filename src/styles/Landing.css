@@ -267,3 +267,70 @@ p { margin: 0; }
 
 .ml-2 { margin-left: 0.5rem; }
 ::selection { background: rgba(197,160,89,0.35); color: var(--off-white); }
+.path-card {
+  position: relative;
+  padding: 28px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(197,160,89,0.25);
+  overflow: hidden;
+  animation: pathPulse 2.8s ease-in-out infinite;
+}
+
+.path-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(197,160,89,0.16), transparent);
+  transform: translateX(-100%);
+  animation: pathShine 3.5s infinite;
+}
+
+.path-card strong {
+  display: block;
+  color: #E0BE72;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.path-card p {
+  color: #F4F4F0;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.path-good {
+  border-color: rgba(34,197,94,0.55);
+}
+
+.path-warning {
+  border-color: rgba(197,160,89,0.55);
+}
+
+.path-danger {
+  border-color: rgba(239,68,68,0.55);
+}
+
+.path-danger strong {
+  color: #ff6b6b;
+}
+
+@keyframes pathPulse {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(197,160,89,0);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(197,160,89,0.12);
+  }
+}
+
+@keyframes pathShine {
+  0% {
+    transform: translateX(-100%);
+  }
+  45%, 100% {
+    transform: translateX(100%);
+  }
+}
