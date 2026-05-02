@@ -174,8 +174,13 @@ p { margin: 0; }
 .problem-card:hover { transform: translateY(-8px); border-color: var(--line-strong) !important; }
 .problem-card-content { padding: 1.55rem; min-height: 260px; }
 .problem-icon { width: 44px; height: 44px; color: var(--gold-light); margin-bottom: 1.2rem; }
-.problem-card h3 { font-size: 1.85rem; margin-bottom: 0.85rem; }
-.problem-card p { color: var(--muted); line-height: 1.65; font-size: 0.96rem; }
+.problem-card h3 {
+  color: #F4F4F0; /* branco suave */
+}
+
+.problem-card p {
+  color: #BFBFBF; /* cinza claro */
+}
 
 @media (max-width: 1024px) { .problem-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .problem-grid { grid-template-columns: 1fr; } }
