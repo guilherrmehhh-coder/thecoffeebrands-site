@@ -111,35 +111,59 @@ const Landing = () => {
 </p>
           </div>
 
-          <div className="hero-panel">
-            <div className="hero-logo-card">
-              <img src="https://raw.githubusercontent.com/guilherrmehhh-coder/thecoffeebrands-site/f55be1492dc45869147a6f1b043739b296c8c135/ChatGPT%20Image%2027%20de%20abr.%20de%202026%2C%2020_35_01.png" alt="Project Brands" />
-            </div>
+<div className="hero-panel">
+  <div className="hero-logo-card">
+    <img
+      src="https://raw.githubusercontent.com/guilherrmehhh-coder/thecoffeebrands-site/f55be1492dc45869147a6f1b043739b296c8c135/ChatGPT%20Image%2027%20de%20abr.%20de%202026%2C%2020_35_01.png"
+      alt="Project Brands"
+    />
+  </div>
 
-            <div className="metric-card">
-              <span>Posicionamento</span>
-              <div className="bar"><i style={{ width: '32%' }} /></div>
-              <small>Força da mensagem: 32%</small>
-            </div>
+  <div className="clean-diagnostic-card">
+    <p className="mini-label">Raio-X do seu Instagram</p>
+    <h3>O que pode estar travando suas vendas hoje</h3>
 
-            <div className="metric-card">
-              <span>Conteúdo</span>
-              <div className="bar"><i style={{ width: '44%' }} /></div>
-              <small>Clareza estratégica: média</small>
-            </div>
+    <div className="clean-metric">
+      <div className="clean-metric-head">
+        <span>Posicionamento</span>
+        <small>Confuso</small>
+      </div>
+      <div className="glow-bar">
+        <i style={{ width: '36%' }} />
+      </div>
+      <p>Sua mensagem ainda não mostra por que alguém deveria escolher você.</p>
+    </div>
 
-            <div className="metric-card">
-              <span>Conversão</span>
-              <div className="bar"><i style={{ width: '18%' }} /></div>
-              <small>Potencial de vendas: 18%</small>
-            </div>
+    <div className="clean-metric">
+      <div className="clean-metric-head">
+        <span>Conteúdo</span>
+        <small>Solto</small>
+      </div>
+      <div className="glow-bar">
+        <i style={{ width: '48%' }} />
+      </div>
+      <p>Você posta, mas o conteúdo não conduz o público para a venda.</p>
+    </div>
 
-            <div className="diagnostic-card main">
-              <p className="mini-label">Perdas estimadas por mês</p>
-              <strong>R$ 18.740</strong>
-              <span>em oportunidades desperdiçadas</span>
-            </div>
-          </div>
+    <div className="clean-metric">
+      <div className="clean-metric-head">
+        <span>Conversão</span>
+        <small>Baixa</small>
+      </div>
+      <div className="glow-bar">
+        <i style={{ width: '28%' }} />
+      </div>
+      <p>Seu perfil recebe atenção, mas ainda não transforma isso em clientes.</p>
+    </div>
+
+    <div className="clean-insight-box">
+      <Sparkles size={18} />
+      <span>
+        O Raio-X mostra o que ajustar primeiro para sua marca vender com mais clareza.
+      </span>
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
