@@ -498,3 +498,16 @@ p { margin: 0; }
     box-shadow: 0 0 26px rgba(231, 194, 108, 0.85);
   }
 }
+.clean-diagnostic-card h3 {
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .clean-diagnostic-card h3 {
+    font-size: 1.7rem;
+  }
+}
