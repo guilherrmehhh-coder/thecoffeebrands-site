@@ -128,9 +128,9 @@ const Landing = () => {
         <span>Posicionamento</span>
         <small>Confuso</small>
       </div>
-      <div className="glow-bar">
-        <i style={{ width: '36%' }} />
-      </div>
+    <div className="glow-bar bar-warning">
+  <i style={{ width: '36%' }} />
+</div>
       <p>Sua mensagem ainda não mostra por que alguém deveria escolher você.</p>
     </div>
 
@@ -139,9 +139,9 @@ const Landing = () => {
         <span>Conteúdo</span>
         <small>Solto</small>
       </div>
-      <div className="glow-bar">
-        <i style={{ width: '48%' }} />
-      </div>
+     <div className="glow-bar bar-medium">
+  <i style={{ width: '48%' }} />
+</div>
       <p>Você posta, mas o conteúdo não conduz o público para a venda.</p>
     </div>
 
@@ -150,9 +150,9 @@ const Landing = () => {
         <span>Conversão</span>
         <small>Baixa</small>
       </div>
-      <div className="glow-bar">
-        <i style={{ width: '28%' }} />
-      </div>
+    <div className="glow-bar bar-danger">
+  <i style={{ width: '28%' }} />
+</div>
       <p>Seu perfil recebe atenção, mas ainda não transforma isso em clientes.</p>
     </div>
 
