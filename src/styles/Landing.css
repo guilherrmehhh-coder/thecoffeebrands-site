@@ -522,3 +522,75 @@ p { margin: 0; }
 .clean-diagnostic-card h3 {
   text-wrap: balance;
 }
+.glow-bar {
+  position: relative;
+  height: 8px;
+  width: 100%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  overflow: hidden;
+}
+
+.glow-bar i {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  animation: barPulse 2.2s ease-in-out infinite;
+}
+
+.glow-bar i::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 45%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.75),
+    transparent
+  );
+  transform: translateX(-120%);
+  animation: barScan 1.8s ease-in-out infinite;
+}
+
+.bar-warning i {
+  background: linear-gradient(90deg, #d7a944, #fff2a6, #d7a944);
+  box-shadow: 0 0 18px rgba(231, 194, 108, 0.65);
+}
+
+.bar-medium i {
+  background: linear-gradient(90deg, #d7a944, #ffe889, #d7a944);
+  box-shadow: 0 0 18px rgba(231, 194, 108, 0.7);
+}
+
+.bar-danger i {
+  background: linear-gradient(90deg, #b42318, #ff5a4f, #ffb4ad);
+  box-shadow: 0 0 18px rgba(255, 72, 72, 0.65);
+}
+
+.bar-success i {
+  background: linear-gradient(90deg, #1f8f4d, #5dff9b, #b8ffd1);
+  box-shadow: 0 0 18px rgba(93, 255, 155, 0.55);
+}
+
+@keyframes barScan {
+  0% {
+    transform: translateX(-130%);
+  }
+
+  100% {
+    transform: translateX(260%);
+  }
+}
+
+@keyframes barPulse {
+  0%, 100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.25);
+  }
+}
