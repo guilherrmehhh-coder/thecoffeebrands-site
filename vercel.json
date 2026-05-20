@@ -7,6 +7,13 @@
   "framework": "create-react-app",
   "routes": [
     {
+      "src": "/brandos",
+      "status": 301,
+      "headers": {
+        "Location": "https://quasar-clover-232.notion.site/BrandOS-3668f4281cc0804e9676c8adb9819f2b"
+      }
+    },
+    {
       "src": "/static/(.*)",
       "headers": { "cache-control": "s-maxage=31536000,immutable" },
       "dest": "/static/$1"
@@ -28,18 +35,9 @@
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
       ]
     }
   ]
